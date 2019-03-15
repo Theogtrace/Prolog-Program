@@ -1,0 +1,51 @@
+sub([a,b],[n,b,f]).
+false
+sub([],[a,b,c]).
+true
+sub([a,b,d],[a,b,c,e,f,h,d]).
+false
+sub([1,2,5],[1,9,6,2,5]).
+true
+sub([1,2,5],[1]).
+false
+intersection([1,2,3],[a,b,2],C).
+C=[2]
+intersection([1,2,3],[a],C).
+C = []
+intersection([1,2,3],[a,f,g],C).
+C = []
+intersection([f,t,h,a],[a,f,g],C).
+C = [f, a]
+intersection([f,b,d],[1,f],C).
+C = [f]
+unionof2([1,2,3],[a,b],C).
+C = [a, b, 1, 2, 3]
+unionof2([],[a,b],C).
+C = [a, b]
+unionof2([6,7,8],[0,9,7],C).
+C = [0, 9, 6, 7, 8]
+unionof2([a,b,t],[t,f,9],C).
+C = [f, 9, a, b, t]
+unionof2([a],[a],C).
+C=[a]
+dif([a,v,b],[b],C).
+C = [a, v]
+dif([a,v,b],[],C).
+C = [a, v, b]
+dif([a,v,b,t],[a,b,h,y],C).
+C = [v, t]
+elemduplicates([a,b,a],A).
+A = [b, a]
+elemduplicates([a,b,a,c,b,b,d,a],A).
+A = [c, b, d, a]
+elemduplicates([1,5,9,4,5,1],A).
+A = [9, 4, 5, 1]
+elemduplicates([1],A).
+A=[1]
+elemduplicates([a,1,5,b,1,2,d,b],A).
+A = [a, 5, 1, 2, d, b]
+
+
+
+
+
